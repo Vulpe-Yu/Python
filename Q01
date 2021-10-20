@@ -1,0 +1,7 @@
+x = float(input())
+y = int(input())
+z = int(input())
+s = int(input())
+k = round(x, 3) #四捨五入取小數後3位
+ans = k * 1000 + y * 20 + z * 5 + s
+print(round(ans,0))
