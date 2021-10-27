@@ -1,0 +1,7 @@
+N = int(input())
+A=[0]*N #一維陣列定義
+for i in range(N):
+    A[i] = int(input())
+for i in range(N):
+    if A[i]%2 == 0: print(A[i], '偶數')
+    else: print(A[i], '奇數')
