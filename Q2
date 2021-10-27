@@ -1,0 +1,9 @@
+AVG = float(input())
+HR = int(input())
+RBI = int(input())
+TB = int(input())
+SS = AVG * 1000 + HR * 20 + RBI * 5 + TB
+if SS >= 1500 : print(SS, '超強者') #不使用小括號而用冒號。
+elif SS >= 800 : print(SS, '高手') #else if = elif。
+elif SS >= 500 : print(SS, '普通')
+else : print(SS, '再努力')
