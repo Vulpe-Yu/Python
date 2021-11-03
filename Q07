@@ -1,0 +1,8 @@
+import statistics #使用函式庫(模組)
+N = int(input())
+for i in range(N):
+    A = input().split() #以空格分割讀取陣列
+    rank = A[1:] #擷取由A[1](含)開始後面的陣列
+    rank = [int(item) for item in rank] #string資料int化
+    print(A[0], min(rank), statistics.median(rank), max(rank))
+    #statistics.median()回傳中位數，須包含模組名稱。
