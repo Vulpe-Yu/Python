@@ -1,0 +1,7 @@
+N = int(input())
+A=[0]*N #一維陣列定義
+for i in range(N):
+    A[i] = int(input())
+Number = int(input())
+A.sort() #陣列由小到大自動排序
+print('進入前', Number, '名至少要', A[N-Number], '支安打')
