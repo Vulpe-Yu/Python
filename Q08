@@ -1,0 +1,7 @@
+list = ['兄弟', '兄弟象', '中信', '中信兄弟', '爪爪']
+N = int(input())
+sum = 0
+for i in range(N):
+    string = input()
+    if string in list: sum = sum + 1
+print(sum)
