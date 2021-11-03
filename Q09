@@ -1,0 +1,7 @@
+name = input().split()
+number = input().split()
+number = [int(item) for item in number] #string資料int化
+for i in range(len(number)):
+    if max(number) == number[i]:
+        wanted = i
+print(name[wanted], max(number))
