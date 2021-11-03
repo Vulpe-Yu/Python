@@ -1,0 +1,5 @@
+N = int(input())
+A=[0]*N #一維陣列定義
+for i in range(N):
+    A[i] = int(input())
+print(sum(A), max(A), min(A)) #直接得到陣列總和、最大、最小值。
