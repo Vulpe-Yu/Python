@@ -5,3 +5,5 @@ for i in range(len(number)):
     if max(number) == number[i]:
         wanted = i
 print(name[wanted], max(number))
+
+#陣列索引值可以倒數，如array[-1]即為array陣列之最後一個item
