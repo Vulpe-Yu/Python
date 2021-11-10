@@ -1,0 +1,40 @@
+import csv
+
+def ReadDataFromFile(filename):
+    '''
+    傳入 csv 檔名 filename
+    傳回 欄位, 檔案內容
+    '''
+    with open(filename,encoding='big5') as infile:
+        csvfile = csv.DictReader(infile)
+        data = list(csvfile)
+        for row in data:
+            for k in row:
+                if '.' in row[k]:
+                    row[k] = float(row[k])
+                elif row[k].isdigit():
+                    row[k] = int(row[k])
+        return csvfile.fieldnames, data
+#-----------------------------------------------------------------------
+def fprint(line):
+    for e, w in zip(line, [5]*16+[6]*3+[5]*9+[6]*3+[8]):
+        x = len(str(e))
+        if '.' not in str(e): print(' '*(w-x)+str(e),end='')
+        else: print(f' {e:.3f}', end='')
+    print()
+
+#-----------------------------------------------------------------------
+# 可以先不要管上面的程式碼
+#-----------------------------------------------------------------------
+
+fields, year_data = ReadDataFromFile('cpbl-player-batter-1990-2019.csv')
+
+year = 2019 #查詢年分。
+
+num = 0
+print('2019年打擊率超過0.3的人有：')
+for p in year_data:
+    if p['YEAR'] == year and p['AVG']>=0.3:
+        print(p['NAME'])
+        num += 1
+print('共計', num, '筆')
