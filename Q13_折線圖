@@ -22,7 +22,7 @@ plt.plot(range(10), [e**2 for e in range(10)]) #X軸0～10，繪出其平方。
 plt.xticks(range(10), fontsize=20)　#X軸標籤0～10，字型大小20。
 #或plt.xticks([3, 5, 8], ['a=3', 'b=5', 'x=8'], fontsize=20)，在指定位置生出指定標籤。
 plt.show()
-#匯出圖檔：plt.savefig('filename.png')
+#匯出圖檔：plt.savefig('filename.png')，需先執行save在執行show。
 
 #標籤
 plt.plot(y1, label='y1') #對應數據產生標籤
