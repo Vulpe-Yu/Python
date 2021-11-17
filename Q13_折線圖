@@ -1,0 +1,18 @@
+import matplotlib.pyplot as plt #匯入模組，模組名稱縮寫。
+
+#單一折線陣列
+plt.plot([2,0,1,8]) #Y軸陣列給定，X默認為[1,2,3,4]
+plt.show()
+
+#函數折線繪製
+x = [1, 3, 9, 10] #X軸陣列給定。
+y = [2, 0, 1, 8] #Y軸陣列給定。
+plt.plot(x, y) #繪出圖形，格式plt.plot(X軸, Y軸)，若X和Y長度不同會發生執行錯誤。
+plt.show()
+
+#標籤參數
+plt.title('This is title', fontsize=24, loc='left')
+plt.xlabel('x-axis caption', fontsize=10)
+plt.ylabel('y-axis caption', fontsize=10)
+#fontsize字型大小
+#loc文字位置：left/center/right
