@@ -14,8 +14,8 @@ plt.show()
 plt.title('This is title', fontsize=24, loc='left')
 plt.xlabel('x-axis caption', fontsize=10)
 plt.ylabel('y-axis caption', fontsize=10)
-#fontsize字型大小
-#loc文字位置：left/center/right
+#fontsize字型大小。
+#loc文字位置：left/center/right。
 
 #二次曲線
 plt.plot(range(10), [e**2 for e in range(10)]) #X軸0～10，繪出其平方。
@@ -23,3 +23,8 @@ plt.xticks(range(10), fontsize=20)　#X軸標籤0～10，字型大小20。
 #或plt.xticks([3, 5, 8], ['a=3', 'b=5', 'x=8'], fontsize=20)，在指定位置生出指定標籤。
 plt.show()
 #匯出圖檔：plt.savefig('filename.png')
+
+#標籤
+plt.plot(y1, label='y1') #對應數據產生標籤
+plt.plot(y2, label='y2')
+plt.legend() #產生標籤。
